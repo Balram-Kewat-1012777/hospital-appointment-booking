@@ -1,0 +1,19 @@
+/* tr {
+    border: 1.5px solid #d1e7dd;} */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #d1e7dd;
+}
+
+th {
+    border: 1px solid #646464;
+}
+
+input[type=checkbox] {
+    zoom: 1.5;
+}

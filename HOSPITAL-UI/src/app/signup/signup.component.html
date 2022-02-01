@@ -1,0 +1,142 @@
+<nav id="signupnav" class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <h1 id="signuphead">Signup</h1>
+
+    <!-- <h3>Appointment</h3> -->
+</nav>
+
+<form id="signupform" [formGroup]="myGroup" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col">
+            <label for="">First Name <abbr title="Firstname required" > *</abbr></label>
+            <input type="text" #firstname (ngModel)="firstname" name="firstname" class="form-control" required formControlName="firstname" ngClass="{'is-valid':submitted f['firstname'].errors}" />
+            <span *ngIf="submitted && f['firstname'].errors" class="invalid text-danger">
+        <span *ngIf="f['firstname'].errors['required']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>firstname is required</span>
+            <br></span>
+        </div>
+        <div class="col"><label for="">Last Name <abbr title="Lastname required" >*</abbr></label>
+            <input type="text" #lastname (ngModel)="lastname" name="lastname" class="form-control" required formControlName="lastname" ngClass="{'is-valid':submitted f['lastname'].errors}" />
+            <span *ngIf="submitted && f['lastname'].errors" class="invalid text-danger">
+        <span *ngIf="f['lastname'].errors['required']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>lastname is required</span>
+            <br></span>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col"><label for="">Email <abbr title="Email required" > *</abbr></label>
+            <input type="email" #email (ngModel)="email" name="email" class="form-control" required formControlName="email" ngClass="{'is-valid':submitted f['email'].errors}" />
+            <span *ngIf="submitted && f['email'].errors" class="invalid text-danger">
+        <span *ngIf="f['email'].errors['required']"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>email
+          is required</span>
+            <span *ngIf="f['email'].errors['email']"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>email
+          should be valid</span>
+            <br></span>
+        </div>
+        <div class="col"><label for="">Username <abbr title="Username required" > *</abbr></label>
+            <input type="text" #username (ngModel)="username" name="username" class="form-control" required formControlName="username" ngClass="{'is-valid':submitted f['username].errors}" />
+            <span *ngIf="submitted && f['username'].errors" class="invalid text-danger">
+        <span *ngIf="f['username'].errors['required']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>Username is required</span>
+            <span *ngIf="f['username'].errors['minlength']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>Username must be of 6 in length</span>
+            <span *ngIf="f['username'].errors['maxlength']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>Username can not have more than 16 char</span>
+            <br> </span>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="row">
+        <!-- empnumber input bar -->
+        <div class="col"><label for="">Emp Number <abbr title="EmpNumber required" > *</abbr></label>
+            <input type="number" #empnumber (ngModel)="empnumber" name="empnumber" class="form-control" required formControlName="empnumber" ngClass="{'is-valid':submitted f['empnumber'].errors}" />
+            <span *ngIf="submitted && f['empnumber'].errors" class="invalid text-danger">
+        <span *ngIf="f['empnumber'].errors['required']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>empnumber is required</span>
+            <br></span>
+        </div>
+
+        <!-- designation input bar -->
+        <div class="col"><label for="">Designation <abbr title="Designation required" > *</abbr></label>
+            <input type="text" #designation (ngModel)="designation" name="designation" class="form-control" required formControlName="designation" ngClass="{'is-valid':submitted f['designation'].errors}" />
+            <span *ngIf="submitted && f['designation'].errors" class="invalid text-danger">
+        <span *ngIf="f['designation'].errors['required']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>designation is required</span>
+            <br></span>
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="row">
+        <div class="col"><label for="">Password <abbr title="Password required" > *</abbr></label>
+            <input type="text" #password (ngModel)="password" name="password" class="form-control" required formControlName="password" ngClass="{'is-valid':submitted f['password'].errors}" />
+            <span *ngIf="submitted && f['password'].errors" class="invalid text-danger">
+        <span *ngIf="f['password'].errors['required']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>password is required</span>
+            <span *ngIf="f['password'].errors['minlength']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>password must be of 6 in length</span>
+            <span *ngIf="f['password'].errors['maxlength']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>password can not have more than 16 char</span>
+            <br> </span>
+        </div>
+        <div class="col">
+            <label for="">Confirm password<abbr title="Confirm password required" > *</abbr></label>
+            <input type="text" class="form-control" required formControlName="cpassword" ngClass="{'is-valid':submitted f['cpassword'].errors}" />
+
+            <span *ngIf="submitted && f['cpassword'].errors" class="invalid text-danger">
+        <span *ngIf="f['cpassword'].errors['required']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>Confirm password is required</span>
+            <span *ngIf="f['cpassword'].errors['minlength']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>Confirm password must be of 6 in length</span>
+            <span *ngIf="f['cpassword'].errors['maxlength']"><i class="fa fa-exclamation-triangle"
+            aria-hidden="true"></i>Confirm password can not have more than 16 char</span>
+            <br> </span>
+
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+        </div>
+    </div>
+    <!-- error message -->
+    <div class="row" *ngIf="showErr">
+        <div class="col-xs-12">
+            <p class="alert alert-danger" role="alert">
+                <strong> ERROR..  Invalid form<h6>NOTE: all details are MANDATORY.</h6> </strong>
+
+            </p>
+        </div>
+    </div>
+    <!-- error message end -->
+    <!-- success message   -->
+    <div class="row" *ngIf="showMsg">
+        <div class="col-xs-12">
+            <p class="alert alert-success">
+                <strong>Registration Success!!</strong><a routerLink="/login">&nbsp;&nbsp; Please click here to login!.</a>
+            </p>
+        </div>
+    </div>
+    <!-- success message end -->
+
+    <!-- <button id="signupbtn" type="submit"  [disabled]="!form.invalid" class="btn btn-primary">SignUp</button> -->
+    <span id="tooltip" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="All fields are MANDATORY">
+    <button   id="signupbtn" type="submit" class="btn btn-primary">
+      SignUp
+    </button>
+</span>
+
+    <button id="resetbtn" type="reset" class="btn btn-primary" (click)="onReset()">Reset</button>
+    <br>
+    <br>
+    <a class="dropdown-item" routerLink="/login">Already have an account? Log-in</a>
+</form>

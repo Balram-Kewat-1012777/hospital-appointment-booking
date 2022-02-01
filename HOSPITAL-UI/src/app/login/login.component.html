@@ -1,0 +1,76 @@
+<nav id="loginnav" class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <h1 id="loginhead">Login</h1>
+</nav>
+<div class="bg">
+    <form class="loginform">
+        <form class="px-4 py-3" [formGroup]="myGroup" (ngSubmit)="onSubmit()" action="/action_page.php">
+
+            <div class="form-group">
+                <label for="exampleDropdownFormEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com" formControlName="email" ngClass="{'is-valid':submitted f['email'].errors}" />
+
+                <span *ngIf="submitted && f['email'].errors" class="invalid text-danger">
+          <span *ngIf="f['email'].errors['required']"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>email is required</span>
+                <span *ngIf="f['email'].errors['email']"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>email should be valid</span>
+                <br></span>
+            </div>
+            <div class="form-group">
+                <label for="exampleDropdownFormPassword1">Password</label>
+                <input type="text" class="form-control" placeholder="Password" formControlName="password" ngClass="{'is-valid':submitted f['password'].errors}" />
+                <span *ngIf="submitted && f['password'].errors" class="invalid text-danger">
+          <span *ngIf="f['password'].errors['required']"><i class="fa fa-exclamation-circle"
+              aria-hidden="true"></i>password is required</span>
+                <span *ngIf="f['password'].errors['minlength']"><i class="fa fa-exclamation-circle"
+              aria-hidden="true"></i>password must be of 6 in length</span>
+                <span *ngIf="f['password'].errors['maxlength']"><i class="fa fa-exclamation-circle"
+              aria-hidden="true"></i>password can not have more than 16 char</span>
+                <br> </span>
+
+            </div>
+
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                <label class="form-check-label" for="dropdownCheck">
+          Remember me
+        </label>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary"  > Sign in</button>   -->
+            <span id="tooltip" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="All fields are MANDATORY">
+        <button [disabled]="!myGroup.valid"  id="signupbtn" type="submit" class="btn btn-primary" routerLink="/appointmentdata"> 
+    <!--   --> 
+    
+          Sign in
+        </button>
+    </span>
+            <!-- error message  -->
+            <div class="row" *ngIf="showErr">
+                <div class="col-xs-12">
+                    <br>
+                    <p class="alert alert-danger" role="alert">
+                        <strong>ERROR .. <br> Invalid email or password !  </strong>
+                    </p>
+                </div>
+            </div>
+            <!-- error message end   -->
+
+            <!-- success message     -->
+            <div class="row" *ngIf="showMsg">
+                <div class="col-xs-12">
+                    <p class="alert alert-success">
+                        <strong>Login Success!!</strong>
+                    </p>
+                </div>
+            </div>
+            <!-- success message end -->
+
+
+
+        </form>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#" routerLink="/signup">New around here? Sign up</a>
+        <a class="dropdown-item" routerLink="/forget">Forgot password?</a>
+    </form>
+
+    <!-- <i class="fa fa-exclamation-circle" aria-hidden="true"></i> -->
+</div>

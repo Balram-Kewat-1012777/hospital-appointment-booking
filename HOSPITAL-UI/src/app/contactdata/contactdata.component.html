@@ -1,0 +1,33 @@
+<h5 class="text-center">Contact us Data List</h5>
+<table class=" table table-info" border="3">
+    <thead>
+
+        <tr class="table-success">
+            <th scope="col">id</th>
+            <th scope="col">Query</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Message</th>
+            <th scope="col">Reviewed</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let datavar of contactlist">
+            <td class="table-warning">{{datavar.id}}</td>
+            <td class="table-warning">{{datavar.query}}</td>
+            <td class="table-warning">{{datavar.name}}</td>
+            <td class="table-warning">{{datavar.email}}</td>
+            <td class="table-warning">{{datavar.subject}}</td>
+            <td class="table-warning">{{datavar.contact}}</td>
+
+            <td class="table-warning">{{datavar.message}}</td>
+            <td><input type="checkbox" name="checkbox"></td>
+        </tr>
+
+    </tbody>
+</table>

@@ -1,0 +1,51 @@
+ #signupnav {
+     width: auto;
+     height: 150px;
+     background: linear-gradient(354deg, #ff2121, rgb(69, 62, 62));
+ }
+ 
+ #signuphead {
+     /* border: 3px solid white; */
+     font-size: 85px;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-weight: 800;
+     color: #f6f3ff;
+     margin: auto;
+ }
+ 
+ #signupform {
+     border: 2px solid#f6f3ff;
+     width: 600px;
+     margin: auto;
+     padding: 20px;
+ }
+ 
+ #resetbtn {
+     border: none;
+     background: linear-gradient( 439deg, #3187f9, rgb(18 1 7));
+     margin-left: 30px;
+ }
+ 
+ #signupbtn {
+     border: none;
+     background: linear-gradient( 439deg, #3187f9, rgb(18 1 7));
+     /* margin-left: 30px; */
+ }
+ 
+ #inputGroupSelect01 {
+     /* border: 2px solid red; */
+     height: 37px;
+     width: 267px;
+     border-radius: 4px;
+ }
+ 
+ label {
+     color: #717171;
+     font-size: 16px;
+     font-weight: 500;
+     margin: 2px 10px;
+ }
+ 
+ abbr {
+     color: #ff8787;
+ }

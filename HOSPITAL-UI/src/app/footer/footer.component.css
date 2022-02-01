@@ -1,0 +1,44 @@
+.boxContainer {
+    background:#237d9e;
+    padding: 10px;
+    height: auto;
+    /* margin: 10px; */
+}
+
+
+.service-names a {
+text-decoration: none;
+color: rgb(209, 209, 209);
+}
+
+.service-names li {
+list-style: none;
+}
+
+
+
+.red-icon {
+color:red;
+}
+
+
+.card-box {
+background: rgb(80, 80, 80);
+min-height: 200px;
+width: 260px;
+color: white;
+
+}
+.service-names li{
+margin-bottom: 10px;
+}
+.service-names li :hover{
+color: aqua;
+font-style: italic;
+}
+
+
+
+.row-cols-1{
+padding: 20px 20px;
+}

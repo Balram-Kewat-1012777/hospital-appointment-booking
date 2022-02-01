@@ -1,0 +1,105 @@
+#appointhead {
+    /* border: 3px solid white; */
+    font-size: 80px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    color: white;
+    margin: auto;
+}
+
+
+/*----------------------------------------------------------------------- */
+
+.marquee {
+    font-weight: 500;
+    color: rgb(0, 0, 0)
+}
+
+#marquee {
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+#signupnav {
+    width: auto;
+    height: 150px;
+    background: linear-gradient(354deg, #ff2121, rgb(69, 62, 62));
+}
+
+#signuphead {
+    /* border: 3px solid white; */
+    font-size: 85px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    color: #f6f3ff;
+    margin: auto;
+}
+
+#appointmentform {
+    border: 2px solid rgb(187, 187, 187);
+    padding-top: 15px;
+    margin: auto;
+    width: 73%;
+}
+
+#inputGroupSelect01 {
+    /* border: 2px solid red; */
+    height: 37px;
+    width: 267px;
+    border-radius: 4px;
+}
+
+.modifyappointment {
+    color: rgb(255, 255, 255);
+    padding-right: 24px;
+}
+
+.modifyappointment:hover {
+    color: #ff2121;
+    text-decoration: underline;
+    background-color: #3282fa;
+}
+
+#resetbtn {
+    border: none;
+    background: linear-gradient( 439deg, #3187f9, rgb(18 1 7));
+    margin-left: 30px;
+}
+
+#bookappointmentbtn {
+    border: none;
+    background: linear-gradient( 439deg, #3187f9, rgb(18 1 7));
+    font-weight: 700;
+    margin-left: 40px;
+}
+
+#dropboxlabel {
+    font-weight: 500;
+    /* margin-top: 5px; */
+    margin-right: 16px;
+    margin-left: 69px;
+    margin-bottom: 2px;
+}
+
+#dropboxlabel1 {
+    font-weight: 500;
+    /* margin-top: 5px; */
+    margin-right: 16px;
+    margin-left: 105px;
+    margin-bottom: 2px;
+}
+
+input.form-control {
+    border: .5px solid rgb(145, 145, 252);
+    margin-left: 56px;
+}
+
+select#inputGroupSelect01.custom-select {
+    border: .5px solid rgb(145, 145, 252);
+    margin-left: 100px;
+}
+
+#errormessage {
+    margin-left: 69;
+}

@@ -1,0 +1,84 @@
+<div class="most-top-nav">
+    <nav style="padding: 0;background-color: #237d9e;" class="navbar   navbar-expand-lg">
+        <div class="dropdown">
+            <button style="border:none green;border-radius: 50px; 
+             
+             border: 2px solid #a1a1a1;
+             background: white;" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user "></i>
+                 
+              </button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item active" href="#"><i class="fa fa-user-circle mx-2"></i>My profile</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mx-2"></i>Edit profile</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa fa-cog mx-2"></i>Setting</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out mx-2"></i>Signout</a></li>
+
+
+
+
+            </ul>
+
+        </div>
+        <h5 style="color: white;
+          margin-left: 10px;">profile</h5>
+    </nav>
+
+</div>
+
+
+
+
+
+
+
+<h5 class="text-center">Appointment List</h5>
+<table class=" table table-info" border="3">
+    <thead>
+
+        <tr class="table-success">
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Problem</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Hospital</th>
+            <th scope="col">Doctor</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <!-- <th scope="col">status</th> -->
+            <th scope="col">check</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let datavar of appointmentlist">
+            <td class="table-warning">{{datavar.id}}</td>
+
+            <td class="table-warning">{{datavar.name}}</td>
+            <td class="table-warning">{{datavar.age}}</td>
+            <td class="table-warning">{{datavar.gender}}</td>
+
+            <td class="table-warning">{{datavar.problem}}</td>
+            <td class="table-warning">{{datavar.date|date:'dd/MM/yyyy'}}</td>
+            <td class="table-warning">{{datavar.time}}</td>
+
+            <td class="table-warning">{{datavar.phone}}</td>
+            <td class="table-warning">{{datavar.email}}</td>
+            <td class="table-warning">{{datavar.hospital}}</td>
+
+            <td class="table-warning">{{datavar.doctor}}</td>
+            <td class="table-warning">{{datavar.address}}</td>
+            <td class="table-warning">{{datavar.city}}</td>
+
+            <td class="table-warning">
+                <input class="checkbox" type="checkbox" name="checkbox"></td>
+
+
+        </tr>
+
+    </tbody>
+</table>

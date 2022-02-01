@@ -1,0 +1,30 @@
+#appointmentform {
+    border: 2px solid rgb(187, 187, 187);
+    padding-top: 15px;
+    margin: auto;
+    width: 29%;
+    padding: 2px 51px;
+}
+
+#appointhead {
+    /* border: 3px solid white; */
+    font-size: 80px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    color: white;
+    margin: auto;
+}
+
+
+/*----------------------------------------------------------------------- */
+
+.marquee {
+    font-weight: 500;
+    color: rgb(0, 0, 0)
+}
+
+#marquee {
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}

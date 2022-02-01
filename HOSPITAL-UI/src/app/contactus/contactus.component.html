@@ -1,0 +1,182 @@
+<!--Section: Contact v.2-->
+
+<div class="slide-side-cat">
+    <a class="d-flx itm-cntr jstfy-cntr" href="" title="Book Appointment" data-toggle="modal" data-target="#book-an-appointment"><span class="i-side-cat i-slide-apnt"></span></a>
+    <!-- <a class="d-flx itm-cntr jstfy-cntr" href="" title="Book Health Check-up" data-toggle="modal" data-target="#book-health-check"><span class="i-side-cat i-slide-check-up"></a> -->
+    <a class="d-flx itm-cntr jstfy-cntr" href="" title="Ask Us Anything" data-toggle="modal" data-target="#ask-us-anything"><span class="i-side-cat i-slide-ask"></span></a>
+</div>
+<section class="mb-4">
+
+    <!--Section heading-->
+    <nav id="signupnav" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <h1 id="signuphead">contact</h1>
+
+        <!-- <h3>Appointment</h3> -->
+    </nav>
+    <br>
+    <!--Section description-->
+    <h6 class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</h6>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" [formGroup]="myGroup" (ngSubmit)="onSubmit()">
+                <!-- -->
+                <!--Grid row-->
+                <!-- radio button -->
+                <div id="query">
+                    <span>Type of Query : <abbr class="text-danger" title="Query required"> * </abbr> </span>
+                    <div class="form-check form-check-inline">
+                        <!-- query radio button code -->
+                        <input formControlName="query" ngClass="{'is-valid':submitted f['query'].errors}" class="form-check-input" type="radio" #query (ngModel)="query" name="query" id="inlineRadio2" value="Enquiry" />
+                        <label class="form-check-label" for="inlineRadio2">Enquiry</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" #query (ngModel)="query" name="query" id="inlineRadio2" value="Complaint" formControlName="query" ngClass="{'is-valid':submitted f['query'].errors}">
+
+                        <label class="form-check-label" for="inlineRadio2">Complaint</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" #query (ngModel)="query" name="query" id="inlineRadio2" value="Feedback" formControlName="query" ngClass="{'is-valid':submitted f['query'].errors}" />
+
+                        <label class="form-check-label" for="inlineRadio2">Feedback</label>
+                    </div>
+                    <br>
+                    <span *ngIf="submitted && f['query'].errors" class="invalid text-danger">
+                        <span align="center" *ngIf="f['query'].errors['required']"><i class="fa fa-exclamation-triangle"
+                                aria-hidden="true"></i>Query is required</span>
+                    <br></span>
+                </div>
+                <!-- radio button end -->
+
+
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+
+                        <!-- name code  -->
+                        <div class="md-form mb-0">
+                            <label for="name" class="">Full name <abbr class="text-danger" title="Name required"> *
+                                </abbr> </label>
+                            <input type="text" #name (ngModel)="name" name="name" id="name" class="form-control" formControlName="name" ngClass="{'is-valid':submitted f['name'].errors}" />
+                            <span *ngIf="submitted && f['name'].errors" class="invalid text-danger">
+                                <span *ngIf="f['name'].errors['required']"><i class="fa fa-exclamation-triangle"
+                                        aria-hidden="true"></i>Full Name is required</span>
+                            <br></span>
+                        </div>
+                    </div>
+
+
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="email" class="">Your email <abbr class="text-danger" title="Email required"> *
+                                </abbr> </label>
+                            <input type="text" #email (ngModel)="email" name="email" id="email" class="form-control" formControlName="email" ngClass="{'is-valid':submitted f['email'].errors}">
+                            <span *ngIf="submitted && f['email'].errors" class="invalid text-danger">
+                                <span *ngIf="f['email'].errors['required']"><i class="fa fa-exclamation-triangle"
+                                        aria-hidden="true"></i>Invalid email</span>
+                            <br></span>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+                </div>
+
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="name" class="">Subject <abbr class="text-danger" title="Subject required"> *
+                                </abbr> </label>
+                            <input type="text" id="subject" #subject (ngModel)="subject" name="subject" class="form-control" formControlName="subject" ngClass="{'is-valid':submitted f['subject'].errors}" />
+                            <span *ngIf="submitted && f['subject'].errors" class="invalid text-danger">
+                                <span *ngIf="f['subject'].errors['required']"><i class="fa fa-exclamation-triangle"
+                                        aria-hidden="true"></i>Subject is required</span>
+                            <br></span>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="name" class="">Contact<abbr class="text-danger" title="Contact required"> *
+                                </abbr> </label>
+                            <input type="number" id="contact" #name (ngModel)="name" name="contact" class="form-control" formControlName="contact" ngClass="{'is-valid':submitted f['contact'].errors}" />
+                            <span *ngIf="submitted && f['contact'].errors" class="invalid text-danger">
+                                <span *ngIf="f['contact'].errors['required']"><i class="fa fa-exclamation-triangle"
+                                        aria-hidden="true"></i>contact is required</span>
+                            <br></span>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+
+
+                    <!--Grid row-->
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <label for="message">Your message <abbr class="text-danger" title="message required"> *
+                                    </abbr> </label>
+                                <textarea type="text" id="message" #message (ngModel)="message" name="message" rows="2" class="form-control md-textarea" formControlName="message" ngClass="{'is-valid':submitted f['message'].errors}"></textarea>
+                                <span *ngIf="submitted && f['message'].errors" class="invalid text-danger">
+                                    <span *ngIf="f['message'].errors['required']"><i class="fa fa-exclamation-triangle"
+                                            aria-hidden="true"></i>message is required</span>
+                                <br></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                    <br>
+                    <!-- <div class="row" *ngIf="showMsg">
+                    <div class="col-xs-12">
+                        <p class="alert alert-success">
+                            <strong>your response has been recorder..thanku!!</strong>
+                        </p>
+                    </div>
+                </div> -->
+                    <div class="text-center text-md-left">
+                        <span id="tooltip" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="All fields are MANDATORY">
+                            <button id="signupbtn" type="submit" class="btn btn-primary">
+                                Send
+                            </button><!--[disabled]="!myGroup.valid" -->
+                        </span>
+                    </div>
+                </div>
+                <div class="status"></div>
+            </form>
+        </div>
+        <!--Grid column-->
+
+
+        <!--Grid column-->
+        <div id="con" class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+                    <p>xyz square, indore (M.P) India</p>
+                </li>
+                <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
+                <li><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
+                    <p>+91 8319151586</p>
+                </li>
+
+                <li><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                    <p>contact@heartcare.com</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+<hr>
+
+<app-footer></app-footer>

@@ -1,0 +1,57 @@
+.marquee{
+    font-weight: 500;
+    color: rgb(0, 0, 0)
+}
+
+#serviceshead{
+    /* border: 3px solid white; */
+    font-size: 85px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    color: white;
+    margin: auto;
+}
+#servicesnnav {
+    width: auto;
+    height: 150px;
+    background: linear-gradient(354deg, #ff2121, rgb(69, 62, 62));
+  }
+
+  /* ************************************************** */
+.card{
+    /* height: 540px; */
+    border: none;
+    /* background-image: url("/assets/img/heart-1133761.jpg"); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat ; */
+    /* align-items: center; */
+    /* padding: 30px 30px; */
+    /* border: 2px solid blue; */
+    /* background-size:  0px  1px; */
+}
+.section{
+    /* color: red; */
+    /* border: 2px solid green; */
+    margin: auto;
+    color: #203e43;
+    display: block;
+    text-decoration: underline rgb(150, 150, 150);
+
+}
+.scard{
+    /* border: 2px solid red; */
+    margin: 10px 50px;
+}
+.doctor{
+    /* border: 4px solid rgb(0, 211, 81); */
+    display: flex;
+}
+.scard img{
+    /* border-radius: 90px; */
+    /* border: 2px solid red; */
+    /* border-color:2px solid black; */
+}
+.slide{
+    /* border: 4px solid yellowgreen; */
+    margin: auto;
+}

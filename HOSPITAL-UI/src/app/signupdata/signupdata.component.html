@@ -1,0 +1,25 @@
+<p>signupdata works!</p>
+<table class="table-secondary table" border="1">
+    <tr class="table-secondary">
+        <th  scope="col" >id</th>
+        <th  scope="col" >firstname</th>
+        <th  scope="col" >lastname</th>
+        <th  scope="col" >email</th>
+        <th  scope="col" >username</th>
+        <th  scope="col" >empnumber</th>
+        <th  scope="col" >designation</th>
+        <th  scope="col" >password</th>
+
+    </tr>
+    <tr *ngFor="let sgn of signupdatalist " >
+        <td>{{sgn.id }}</td>
+        <td>{{sgn.firstname}}</td>
+        <td>{{sgn.lastname}}</td>
+        <td>{{sgn.email}}</td>
+        <td>{{sgn.username}}</td>
+        <td>{{sgn.empnumber}}</td>
+        <td>{{sgn.designation }}</td>
+        <td>{{sgn.password}}</td>
+    </tr>
+
+</table>

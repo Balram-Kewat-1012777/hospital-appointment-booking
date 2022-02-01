@@ -1,0 +1,49 @@
+<!-- top appointment bar -->
+<nav id="loginnav" class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <h1 id="appointhead">Cancel Appointment</h1>
+</nav>
+
+<br>
+
+<div class="col">
+    <div class="input-group mb-3">
+        <!-- <button style=" margin-top: 25px;margin-left: 43px; " type="button" class="btn btn-danger" (click)="deleteStudent(Student)">Delete</button> -->
+    </div>
+</div>
+<!-- <form id="appointmentform"  #registerForm="ngForm" [formGroup]="myGroup" (ngSubmit)="onSubmit()" (ngSubmit)="updateAppointment()" action="/action_page.php"> -->
+
+<form class="container" id="appointmentform" (ngSubmit)="deleteAppointment(id)">
+
+
+    <div class="form-group">
+        <div class="row">
+
+            <label style=" color: rgb(255, 78, 78);" for="" id="dropboxlabel">Appointment ID </label>
+            <input style="  color: green;" type="number" #id [(ngModel)]="appointmenttId" name="id" class="form-control" placeholder="Appointment ID *">
+
+
+
+
+            <div class="input-group mb-3">
+                <button style=" margin-top: 25px;margin-left: 50px; " type="button" class="btn btn-danger" (click)="deleteAppointment(id)">Cancel Appointment</button>
+            </div>
+
+        </div>
+        <!-- ------------------------------------------------------------- -->
+    </div>
+</form>
+
+<br><br><br>
+<!-- bottom  navigation bar -->
+
+
+
+<hr>
+
+<app-footer></app-footer>
+<nav id="marquee" class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+    <marquee class="marquee" width="auto" direction="left" height="auto">
+        HeartCare © 2022, All Rights Reserved, Design & Developed By” —Balram kewat
+    </marquee>
+</nav>

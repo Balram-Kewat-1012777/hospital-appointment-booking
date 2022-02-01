@@ -1,0 +1,252 @@
+<!-- top appointment bar -->
+<nav id="loginnav" class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <h1 id="appointhead">Modify Appointment</h1>
+</nav>
+
+<br>
+
+<div class="col">
+    <div class="input-group mb-3">
+        <!-- <button style=" margin-top: 25px;margin-left: 43px; " type="button" class="btn btn-danger" (click)="deleteStudent(Student)">Delete</button> -->
+    </div>
+</div>
+<!-- <form id="appointmentform"  #registerForm="ngForm" [formGroup]="myGroup" (ngSubmit)="onSubmit()" (ngSubmit)="updateAppointment()" action="/action_page.php"> -->
+
+<form id="appointmentform" [formGroup]="myGroup" (ngSubmit)=" updateAppointment()">
+    <div class="row">
+        <div class="col">
+            <label style=" color: rgb(255, 78, 78);" for="" id="dropboxlabel">Appointment ID </label>
+            <input style=" width: 433px;color: green;" type="text" #id [(ngModel)]="AppointmentToUpdate.id" name="id" class="form-control" placeholder="Appointment ID *" formControlName="id" ngClass="{'is-valid':submitted f['id'].errors}" />
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col"><label for="" id="dropboxlabel">Your Name</label>
+            <input type="text" #name (ngModel)="AppointmentToUpdate.name" name="name" class="form-control" placeholder="name *" formControlName="name" ngClass="{'is-valid':submitted f['name'].errors}" />
+            <span *ngIf="submitted && f['name'].errors" class="invalid text-danger">
+                    <span style="margin-left: 54px;" *ngIf="f['name'].errors['required']"><i
+                            class="fa fa-exclamation-triangle" aria-hidden="true">
+                        </i>name is required</span>
+            <br></span>
+        </div>
+
+        <div class="col">
+            <label for="" id="dropboxlabel1">Gender</label>
+            <div class="input-group mb-3">
+
+                <select #gender (ngModel)="AppointmentToUpdate.gender" name="gender" class="custom-select" id="inputGroupSelect01" formControlName="gender" ngClass="{'is-valid':submitted f['gender'].errors}">
+    
+                        <option>female</option>
+                        <option>male</option>
+                        <option>transgender</option>
+    
+                    </select>
+                <span *ngIf="submitted && f['gender'].errors" class="invalid text-danger">
+                        <span style="margin-left: 100px;" *ngIf="f['gender'].errors['required']"><i
+                                class="fa fa-exclamation-triangle" aria-hidden="true"></i>Select gender </span>
+                <br></span>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------ -->
+
+
+    <!-- ------------------------------------------------------------------------------------ -->
+    <div class="row">
+        <div class="col"><label for="" id="dropboxlabel">Your email</label>
+            <input type="email" #email (ngModel)="AppointmentToUpdate.email" name="email" class="form-control" placeholder="Email *" formControlName="email" ngClass="{'is-valid':submitted f['email'].errors}" />
+            <span *ngIf="submitted && f['email'].errors" class="invalid text-danger">
+                    <span style="margin-left: 54px;" *ngIf="f['email'].errors['required']"><i
+                            class="fa fa-exclamation-triangle" aria-hidden="true">
+                        </i>email can't be empty</span>
+            <span *ngIf="f['email'].errors['email']"><i class="fa fa-exclamation-triangle" aria-hidden="true">
+                        </i>email should be valid</span>
+            <br></span>
+        </div>
+
+        <div class="col"> <label for="" id="dropboxlabel1">Doctors</label>
+            <div class="input-group mb-3">
+
+                <select #doctor (ngModel)="AppointmentToUpdate.doctor" name="doctor" class="custom-select" id="inputGroupSelect01" formControlName="doctor" ngClass="{'is-valid':submitted f['doctor'].errors}">
+    
+                        <option>Dr. Rohit chabra</option>
+                        <option>Dr. Abbas Shahid</option>
+                        <option>Dr. Abdul Malik</option>
+                        <option>Dr. Achraya Dinesh</option>
+                        <option>Dr. Achraya Dilip</option>
+                        <option>Dr. Dhand Hemlata</option>
+                        <option>others</option>
+                    </select>
+                <span *ngIf="submitted && f['doctor'].errors" class="invalid text-danger">
+                        <span style="margin-left: 100px;" *ngIf="f['doctor'].errors['required']"><i
+                                class="fa fa-exclamation-triangle" aria-hidden="true"></i>Select Doctor </span>
+                <br></span>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------ -->
+    <div class="row">
+        <div class="col">
+            <label for="" id="dropboxlabel">Appointment date</label>
+            <input style="padding-right:40px;" type="date" #date (ngModel)="AppointmentToUpdate.date" name="date" placeholder="Date *" class="form-control" formControlName="date" ngClass="{'is-valid':submitted f['date'].errors}" />
+
+            <span *ngIf="submitted && f['date'].errors" class="invalid text-danger">
+                    <span style="margin-left: 54px;" *ngIf="f['date'].errors['required']"><i
+                            class="fa fa-exclamation-triangle" aria-hidden="true">
+                        </i>date can't be empty</span>
+
+            <br></span>
+        </div>
+
+        <div class="col"> <label for="" id="dropboxlabel1">Time</label>
+            <div class="input-group mb-3">
+
+                <select #time (ngModel)="AppointmentToUpdate.time" name="time" class="custom-select" id="inputGroupSelect01" formControlName="time" ngClass="{'is-valid':submitted f['time'].errors}">
+                        <option selected>time</option>
+                        <option>10:00 - 10:30</option>
+                        <option>10:30 - 11:00</option>
+                        <option>11:00 - 11:30</option>
+                        <option>11:30 - 12:00</option>
+                        <option>12:00 - 12:30</option>
+                        <option>12:30 - 01:00</option>
+                        <option>01:30 - 02:00</option>
+                        <option>02:00 - 02:30</option>
+                        <option>02:30 - 03:00</option>
+                        <option>03:00 - 03:30</option>
+                        <option>03:30 - 04:00</option>
+                        <option>04:00 - 04:30</option>
+                        <option>04:30 - 05:00</option>
+                        <option>05:00 - 05:30</option>
+                        <option>05:30 - 06:00</option>
+                        <option>06:00 - 06:30</option>
+                        <option>06:30 - 07:00</option>
+                    </select>
+                <span *ngIf="submitted && f['time'].errors" class="invalid text-danger">
+                        <span style="margin-left: 100px;" *ngIf="f['time'].errors['required']"><i
+                                class="fa fa-exclamation-triangle" aria-hidden="true"></i>Select Appointment Time</span>
+                <br></span>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------------------------------------------------->
+
+    <div class="row">
+        <div class="col"><label for="" id="dropboxlabel">phone number</label>
+            <input #phone (ngModel)="AppointmentToUpdate.phone" name="phone" type="number" class="form-control" placeholder="phone ex. +91 987654321 *" formControlName="phone" ngClass="{'is-valid':submitted f['phone'].errors}" />
+            <span *ngIf="submitted && f['phone'].errors" class="invalid text-danger">
+                    <span style="margin-left: 54px;" *ngIf="f['phone'].errors['required']"><i
+                            class="fa fa-exclamation-triangle" aria-hidden="true"></i>phone is
+                        required</span>
+            <br></span>
+        </div>
+        <div class="col"> <label for="" id="dropboxlabel1">problem</label>
+            <div class="input-group mb-3">
+
+                <select #problem (ngModel)="AppointmentToUpdate.problem" name="problem" class="custom-select" id="inputGroupSelect01" formControlName="problem" ngClass="{'is-valid':submitted f['problem'].errors}">
+    
+                        <option>Inherited heart conditions.</option>
+                        <option>Congenital heart conditions</option>
+                        <option>Arrhythmia</option>
+                        <option>Valve disease</option>
+                        <option>High blood pressure</option>
+                        <option>Unstable angina</option>
+    
+                    </select>
+                <span *ngIf="submitted && f['problem'].errors" class="invalid text-danger">
+                        <span style="margin-left: 100px;" *ngIf="f['problem'].errors['required']"><i
+                                class="fa fa-exclamation-triangle" aria-hidden="true"></i>Select problem </span>
+                <br></span>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------ -->
+
+
+
+    <div class="row">
+        <div class="col"><label for="" id="dropboxlabel">your Age</label>
+            <input #age (ngModel)="AppointmentToUpdate.age" name="age" type="number" class="form-control" placeholder="Age *" formControlName="age" ngClass="{'is-valid':submitted f['age'].errors}" />
+            <span *ngIf="submitted && f['age'].errors" class="invalid text-danger">
+                    <span style="margin-left: 54px;" *ngIf="f['age'].errors['required']"><i
+                            class="fa fa-exclamation-triangle" aria-hidden="true"></i>fill the Age </span>
+            <br></span>
+        </div>
+
+        <div class="col"><label for="" id="dropboxlabel1">Hospital</label>
+            <div class="input-group mb-3">
+                <select #hospital (ngModel)="AppointmentToUpdate.hospital" name="hospital" class="custom-select" id="inputGroupSelect01" formControlName="hospital" ngClass="{'is-valid':submitted f['hospital'].errors}">
+                        <option>super cardio, </option>
+                    </select>
+                <span *ngIf="submitted && f['hospital'].errors" class="invalid text-danger">
+                        <span style="margin-left: 100px;" *ngIf="f['hospital'].errors['required']"><i
+                                class="fa fa-exclamation-triangle" aria-hidden="true"></i>Select Hospital </span>
+                <br></span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------ -->
+    <div class="row">
+        <div class="col"><label for="" id="dropboxlabel">Address</label>
+            <input #address (ngModel)="AppointmentToUpdate.address" name="address" type="text" class="form-control" placeholder="Address *" formControlName="address" ngClass="{'is-valid':submitted f['address'].errors}" />
+            <span *ngIf="submitted && f['address'].errors" class="invalid text-danger">
+                    <span *ngIf="f['address'].errors['required']"><i class="fa fa-exclamation-triangle" aria-hidden="true"
+                            style="margin-left: 54px;"></i>address is
+                        required</span>
+            <br></span>
+        </div>
+
+        <div class="col"><label for="" id="dropboxlabel1">City</label>
+            <div class="input-group mb-3">
+
+                <select #city (ngModel)="AppointmentToUpdate.city" name="city" class="custom-select" id="inputGroupSelect01" formControlName="city" ngClass="{'is-valid':submitted f['city'].errors}">
+                        <option>Ahmedabad</option>
+                        <option>Bengaluru</option>
+                        <option>Chennai</option>
+                        <option>Delhi</option>
+                        <option>Goa</option>
+                        <option>Hyderabad</option>
+                        <option>Indore</option>
+                        <option>kolkata</option>
+                        <option>Indore</option>
+                        <option>Mumbai</option>
+                        <option>Nagpur</option>
+                        <option>Other</option>
+                    </select>
+                <span *ngIf="submitted && f['city'].errors" class="invalid text-danger">
+                        <span style="margin-left: 100px;" *ngIf="f['city'].errors['required']"><i
+                                class="fa fa-exclamation-triangle" aria-hidden="true"></i>Select City </span>
+                <br></span>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- ------------------------------------------------------------------------------------ -->
+    <br>
+    <br>
+    <button id="bookappointmentbtn" type="submit" class="btn btn-primary">Save appointment</button>
+    <button id="resetbtn" type="reset" class="btn btn-primary" (click)="onReset()">Reset </button>
+
+    <!-- (click)="onReset()" -->
+    <br>
+    <br>
+</form>
+
+<!-- bottom  navigation bar -->
+
+
+
+<hr>
+
+<app-footer></app-footer>
+<nav id="marquee" class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+    <marquee class="marquee" width="auto" direction="left" height="auto">
+        HeartCare © 2022, All Rights Reserved, Design & Developed By” —Balram kewat
+    </marquee>
+</nav>
